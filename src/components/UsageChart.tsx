@@ -204,7 +204,7 @@ const UsageChart: React.FC<UsageChartProps> = ({ measurements }) => {
             const label = context.dataset.label || "";
             const value = context.parsed.y;
             const unit = label.includes("Electricity") ? " kWh" : " m³";
-            return `${label}: ${value.toFixed(2)}${unit}`;
+            return `${label}: ${value?.toFixed(2)}${unit}`;
           },
         },
       },
